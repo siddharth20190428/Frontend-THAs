@@ -1,5 +1,4 @@
 // Question 1
-
 function is_array(elem) {
   return Array.isArray(elem);
 }
