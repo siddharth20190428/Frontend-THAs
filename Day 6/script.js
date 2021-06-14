@@ -29,20 +29,17 @@ function first(array, n = 1) {
 
 // Question 5
 var arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
-let mostfreq = arr1[0];
 const freq = arr1.reduce((acc, item) => {
   if (!acc[item]) {
     acc[item] = 1;
   } else {
     acc[item]++;
-    if (acc[item] > mostfreq) {
-      mostfreq = acc[item];
-    }
   }
   return acc;
 }, {});
+let maxfreq = Math.max(...Object.values(freq));
 for (i in freq) {
-  if (freq[i] == mostfreq) {
+  if (freq[i] == maxfreq) {
     console.log(`${i} (${freq[i]} times)`);
   }
 }
