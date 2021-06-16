@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 402px;
+  height: 402px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background: rgb(255, 0, 0);
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.white {
+  background: #fff;
+}
