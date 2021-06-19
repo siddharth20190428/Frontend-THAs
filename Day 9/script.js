@@ -10,22 +10,20 @@ let boxes = document.querySelectorAll(".box");
 let booked = document.querySelector(".booked");
 let remaining = document.querySelector(".remaining");
 
+const updateSeat = (seats) => {
+  booked.innerText = seats;
+  remaining.innerText = 36 - seats;
+};
+
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     let bookedValue = parseInt(booked.innerText);
-    let remainingValue = parseInt(remaining.innerText);
     if (box.classList.contains("boxClicked")) {
       box.classList.remove("boxClicked");
-      bookedValue -= 1;
-      remainingValue += 1;
-      booked.innerText = bookedValue;
-      remaining.innerText = remainingValue;
+      updateSeat(bookedValue - 1);
     } else {
       box.classList.add("boxClicked");
-      bookedValue += 1;
-      remainingValue -= 1;
-      booked.innerText = bookedValue;
-      remaining.innerText = remainingValue;
+      updateSeat(bookedValue + 1);
     }
   });
 });
