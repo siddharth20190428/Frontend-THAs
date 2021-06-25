@@ -23,15 +23,6 @@ function shuffle() {
 
 shuffle();
 
-setInterval(() => {
-  time++;
-  min = Math.floor(time / 60);
-  sec = time % 60;
-  min = min < 10 ? "0" + min : min;
-  sec = sec < 10 ? "0" + sec : sec;
-  timeParaEL.innerHTML = `${min}:${sec}`;
-}, 1000);
-
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     if (!card.classList.contains("flip") && flips < 2) {
@@ -55,3 +46,12 @@ cards.forEach((card) => {
     }
   });
 });
+
+setInterval(() => {
+  time++;
+  min = Math.floor(time / 60);
+  sec = time % 60;
+  min = min < 10 ? "0" + min : min;
+  sec = sec < 10 ? "0" + sec : sec;
+  timeParaEL.innerHTML = `${min}:${sec}`;
+}, 1000);
