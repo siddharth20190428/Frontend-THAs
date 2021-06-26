@@ -23,15 +23,20 @@ function loadQuestion(num) {
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (optionElems[index].innerHTML == questions[qNo].answer) {
-      qNo++;
+      button.style.background = "green";
       score++;
       scoreEl.innerHTML = `Score : ${score}`;
-      if (qNo > 4) {
-        alert("You won");
+      console.log(qNo);
+      if (qNo == 4) {
+        alert(
+          `Congratulations! You completed the Quiz with a score of ${score}`
+        );
         return;
       }
-      loadQuestion(qNo);
     }
+    button.style.background = "red";
+    qNo++;
+    loadQuestion(qNo);
   });
 });
 
