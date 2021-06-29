@@ -6,6 +6,11 @@ let buttons = document.querySelectorAll(".op-btn");
 let questionElem = document.querySelector(".question");
 let optionElems = document.querySelectorAll(".option");
 let stats = document.querySelector(".stats");
+
+var modal = document.getElementById("myModal");
+var modalMsg = document.getElementById("modal-message");
+var span = document.getElementsByClassName("close")[0];
+
 let qNo = 0;
 let score = 0;
 
@@ -23,21 +28,41 @@ function loadQuestion(num) {
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (optionElems[index].innerHTML == questions[qNo].answer) {
-      button.style.background = "green";
       score++;
       scoreEl.innerHTML = `Score : ${score}`;
-      console.log(qNo);
-      if (qNo == 4) {
-        alert(
-          `Congratulations! You completed the Quiz with a score of ${score}`
-        );
-        return;
-      }
+      button.classList.add("green");
+    } else {
+      button.classList.add("red");
     }
-    button.style.background = "red";
+    if (qNo == 4) {
+      if (score == 5) {
+        modalMsg.innerHTML = `Congratulations! You won`;
+        modalMsg.style.color = "green";
+      } else {
+        modalMsg.innerHTML = `Sorry! You lost, your score was ${score}`;
+        modalMsg.style.color = "red";
+      }
+      modal.style.display = "block";
+      return;
+    }
     qNo++;
-    loadQuestion(qNo);
+    setTimeout(() => {
+      button.classList.remove("green", "red");
+      loadQuestion(qNo);
+    }, 1000);
   });
 });
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
 loadQuestion(qNo);
