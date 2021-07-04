@@ -1,1 +1,16 @@
 /others
+
+/react-thas/node_modules
+/react-thas/.pnp
+/react-thas/.pnp.js
+/react-thas/coverage
+/react-thas/build
+/react-thas/.DS_Store
+/react-thas/.env.local
+/react-thas/.env.development.local
+/react-thas/.env.test.local
+/react-thas/.env.production.local
+
+/react-thas/npm-debug.log*
+/react-thas/yarn-debug.log*
+/react-thas/yarn-error.log*
