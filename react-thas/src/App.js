@@ -6,6 +6,7 @@ import CalorieList from "./Day 17/CalorieList";
 import Chess1 from "./Day 18/Chess";
 import CalorieList1 from "./Day 18/CalorieList";
 import CalorieList2 from "./Day 20/CalorieList";
+import Box from "./Day 19/CountButtons";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <CalorieList /> */}
       {/* <Chess1 /> */}
       {/* <CalorieList1 /> */}
-      <CalorieList2 />
+      {/* <CalorieList2 /> */}
+      <Box />
     </div>
   );
 }
