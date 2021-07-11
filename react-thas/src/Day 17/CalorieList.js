@@ -1,5 +1,5 @@
 import React from "react";
-import "./CalorieList.css";
+import foods from "../utils/FoodData";
 
 const CalorieCard = ({ food, calory }) => {
   return (
@@ -15,12 +15,9 @@ const CalorieList = () => {
     <div>
       <h2 className="head">Calorie Read Me</h2>
       <div className="container">
-        <CalorieCard food="Rice" calory="80" />
-        <CalorieCard food="Pizza" calory="50" />
-        <CalorieCard food="Chapati" calory="30" />
-        <CalorieCard food="Sandwich" calory="40" />
-        <CalorieCard food="Brownie" calory="50" />
-        <CalorieCard food="Dish" calory="30" />
+        {foods.map((elem) => (
+          <CalorieCard food={elem.name} calory={elem.calory} key={elem.id} />
+        ))}
       </div>
     </div>
   );

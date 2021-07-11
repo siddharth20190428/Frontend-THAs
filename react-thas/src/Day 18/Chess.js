@@ -1,16 +1,16 @@
 import React from "react";
-import "./Chess.css";
 
 const Chess = () => {
   const addBoxes = () => {
     let boxes = [];
     for (let i = 0; i < 8; i++) {
       for (let j = 0; j < 8; j++) {
-        let style = { background: "#fff" };
+        let myStyle = { background: "#fff" };
         if (i % 2 === j % 2) {
-          style.background = "#000";
+          myStyle.background = "#000";
         }
-        boxes.push(<div className="box" style={style}></div>);
+        boxes.push(<div className="box" style={myStyle}></div>);
+        console.log(1);
       }
     }
     return boxes;

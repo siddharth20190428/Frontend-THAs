@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./CalorieList.css";
+import foods from "../utils/FoodData";
 
 const CalorieCard = ({ card, cards, setCards }) => {
   return (
@@ -18,38 +18,6 @@ const CalorieCard = ({ card, cards, setCards }) => {
 };
 
 const CalorieList = () => {
-  const foods = [
-    {
-      id: 1,
-      name: "Pizza",
-      calory: 50,
-    },
-    {
-      id: 2,
-      name: "Chapati",
-      calory: 30,
-    },
-    {
-      id: 3,
-      name: "Sandwich",
-      calory: 40,
-    },
-    {
-      id: 4,
-      name: "Brownie",
-      calory: 50,
-    },
-    {
-      id: 5,
-      name: "Dish",
-      calory: 30,
-    },
-    {
-      id: 6,
-      name: "Rice",
-      calory: 80,
-    },
-  ];
   const [cards, setCards] = useState(foods);
   return (
     <div>

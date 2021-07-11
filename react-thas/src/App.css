@@ -9,3 +9,58 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* Chess Starts */
+.out {
+  background: #000;
+  height: 202px;
+  display: flex;
+}
+
+.board {
+  width: 162px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  border: 1px solid white;
+}
+
+.row {
+  display: flex;
+}
+
+.row:nth-child(odd) .box:nth-child(odd),
+.row:nth-child(even) .box:nth-child(even) {
+  background: #000;
+}
+.row:nth-child(odd) .box:nth-child(even),
+.row:nth-child(even) .box:nth-child(odd) {
+  background: #fff;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+}
+
+/* Chess Ends */
+
+/* Calorie List Starts*/
+.container {
+  width: 500px;
+  height: 400px;
+  overflow-y: auto;
+  border: 2px solid green;
+}
+.head {
+  text-align: center;
+}
+.food {
+  width: 90%;
+  height: fit-content;
+  padding: 5px;
+  margin: 20px;
+  border-radius: 5px;
+  background: rgb(52, 153, 167);
+}
+/* Calorie List Ends */

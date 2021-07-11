@@ -1,5 +1,4 @@
 import React from "react";
-import "./Chess.css";
 
 const Chess = () => {
   const Box = () => {
