@@ -1,5 +1,4 @@
 import React from "react";
-import foods from "../utils/FoodData";
 
 const CalorieCard = ({ food, calory }) => {
   return (
@@ -16,7 +15,7 @@ const CalorieCard = ({ food, calory }) => {
   );
 };
 
-const CalorieList = () => {
+const CalorieList = (foods) => {
   return (
     <div>
       <h2 className="head">Calorie Read Me</h2>

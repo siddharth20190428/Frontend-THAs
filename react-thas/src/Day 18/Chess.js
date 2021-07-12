@@ -10,7 +10,6 @@ const Chess = () => {
           myStyle.background = "#000";
         }
         boxes.push(<div className="box" style={myStyle}></div>);
-        console.log(1);
       }
     }
     return boxes;
