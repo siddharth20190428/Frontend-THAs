@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import foods from "../utils/FoodData";
 
 const CalorieCard = ({ card, cards, setCards }) => {
   return (
@@ -17,7 +16,7 @@ const CalorieCard = ({ card, cards, setCards }) => {
   );
 };
 
-const CalorieList = () => {
+const CalorieList = (foods) => {
   const [cards, setCards] = useState(foods);
   return (
     <div>
