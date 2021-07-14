@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TextField, Button } from "@material-ui/core";
 
 const AddFood = ({ foods, setFoods }) => {
   const [name, setName] = useState("");
@@ -10,9 +11,12 @@ const AddFood = ({ foods, setFoods }) => {
     setAmount(0);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <form onSubmit={handleSubmit} className="add-food-form">
+      <TextField
+        id="standard-basic"
+        label="Food"
         type="text"
+        className="form-input"
         value={name}
         onChange={(e) => {
           setName(e.target.value);
@@ -20,15 +24,19 @@ const AddFood = ({ foods, setFoods }) => {
         placeholder="Item Name"
         autoComplete="off"
       />
-      <input
+      <TextField
+        id="standard-basic"
+        label="Calorie Amount"
+        className="form-input"
         type="number"
         value={amount}
         onChange={(e) => {
           setAmount(e.target.value);
         }}
-        placeholder="Calorie Amount"
       />
-      <button>Add Item</button>
+      <Button variant="contained" color="primary" type="submit">
+        Add Item
+      </Button>
     </form>
   );
 };

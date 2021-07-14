@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TextField, Button } from "@material-ui/core";
 
 const FoodItem = ({ id, foods, setFoods }) => {
   const [open, setOpen] = useState(false);
@@ -18,34 +19,53 @@ const FoodItem = ({ id, foods, setFoods }) => {
   };
 
   return (
-    <div>
+    <div className="food-card">
       {!open ? (
         <>
           <h3>{foods[id].name}</h3>
           <p>You have consumed {foods[id].amount} calories</p>
-          <button onClick={() => setOpen(true)}>Edit</button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => setOpen(true)}
+          >
+            Edit
+          </Button>
         </>
       ) : (
         <>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            autoComplete="off"
-          />
-          <input
-            type="number"
-            value={amount}
-            onChange={(e) => {
-              setAmount(e.target.value);
-            }}
-          />
-          <button onClick={handleUpdate}>Done</button>
+          <div className="edit-item">
+            <TextField
+              id="standard-basic"
+              label="Food"
+              type="text"
+              className="form-input"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              placeholder="Item Name"
+              autoComplete="off"
+            />
+            <TextField
+              id="standard-basic"
+              label="Calorie Amount"
+              type="number"
+              className="form-input"
+              value={amount}
+              onChange={(e) => {
+                setAmount(e.target.value);
+              }}
+            />
+          </div>
+          <Button variant="contained" color="primary" onClick={handleUpdate}>
+            Done
+          </Button>
         </>
       )}
-      <button onClick={handleDelete}>Delete</button>
+      <Button variant="contained" color="secondary" onClick={handleDelete}>
+        Delete
+      </Button>
     </div>
   );
 };

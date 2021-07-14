@@ -1,0 +1,37 @@
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.add-food-form {
+  display: flex;
+  align-items: center;
+}
+.edit-item {
+  padding: 10px;
+}
+.form-input {
+  margin: 10px !important;
+}
+
+.foods-container {
+  height: 50vh;
+  width: 100%;
+  overflow-y: auto;
+  border: 1px solid #001858;
+  margin: 20px 0;
+  padding: 15px;
+  background: #fef6e4;
+  color: #001858;
+}
+
+.food-card {
+  border: 1px solid #001858;
+  background: #8bd3dd;
+  margin: 10px 0;
+}
+
+.food-card > button,
+.food-card > p {
+  margin: 10px;
+}
