@@ -1,5 +1,6 @@
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import Home from "./Home";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Chess from "./Day 16/Chess";
 import MemeCard from "./Day 16/MemeCard";
 import CalorieList from "./Day 17/CalorieList";
@@ -14,14 +15,35 @@ import foods from "./utils/FoodData";
 function App() {
   return (
     <div className="App">
-      {/* <Chess /> */}
-      {/* <MemeCard /> */}
-      {/* <CalorieList foods={foods} /> */}
-      {/* <Chess1 /> */}
-      {/* <CalorieList1 foods={foods} /> */}
-      {/* <CalorieList2 /> */}
-      {/* <Box /> */}
-      <CalorieTracker />
+      <Router>
+        <h3 className="home-header">
+          <Link to="/">Homepage</Link>
+        </h3>
+        <Switch>
+          <Route exact path="/day16/chess" component={Chess} />
+          <Route exact path="/day16/meme-card" component={MemeCard} />
+          <Route
+            exact
+            path="/day17/"
+            component={() => <CalorieList foods={foods} />}
+          />
+          <Route exact path="/day18/chess" component={Chess1} />
+          <Route
+            exact
+            path="/day18/calorie-list"
+            component={() => <CalorieList1 foods={foods} />}
+          />
+          <Route exact path="/day19/" component={Box} />
+          <Route
+            exact
+            path="/day20/"
+            component={() => <CalorieList2 foods={foods} />}
+          />
+          <Route exact path="/day21/" component={CalorieTracker} />
+          <Route exact path="/" component={Home} />
+          <Home />
+        </Switch>
+      </Router>
     </div>
   );
 }

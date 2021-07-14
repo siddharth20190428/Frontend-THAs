@@ -5,7 +5,7 @@ const MemeCard = () => {
   return (
     <div className="card">
       <div className="card-pic">
-        <img src="./meme.png" />
+        <img src="../meme.png" alt="My meme" />
       </div>
       <h3>This is my meme card</h3>
     </div>

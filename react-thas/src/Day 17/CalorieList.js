@@ -9,7 +9,7 @@ const CalorieCard = ({ food, calory }) => {
   );
 };
 
-const CalorieList = (foods) => {
+const CalorieList = ({ foods }) => {
   return (
     <div>
       <h2 className="head">Calorie Read Me</h2>

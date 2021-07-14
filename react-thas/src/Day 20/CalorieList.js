@@ -16,7 +16,7 @@ const CalorieCard = ({ card, cards, setCards }) => {
   );
 };
 
-const CalorieList = (foods) => {
+const CalorieList = ({ foods }) => {
   const [cards, setCards] = useState(foods);
   return (
     <div>

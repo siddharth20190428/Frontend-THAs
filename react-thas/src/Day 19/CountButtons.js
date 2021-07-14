@@ -14,6 +14,9 @@ class CountButton extends React.Component {
           let ncount = this.state.count + 1;
           this.setState({ count: ncount });
         },
+        style: {
+          width: "20px",
+        },
       },
       this.state.count
     );
@@ -32,7 +35,17 @@ class Box extends React.Component {
         {},
         "There are 4 counter component instances that each manage their own state."
       ),
-      [...Array(4).keys()].map(() => <CountButton />),
+      React.createElement(
+        "div",
+        {
+          style: {
+            display: "flex",
+            justifyContent: "center",
+            padding: "10px",
+          },
+        },
+        [...Array(4).keys()].map(() => <CountButton />)
+      ),
     ]);
   }
 }
