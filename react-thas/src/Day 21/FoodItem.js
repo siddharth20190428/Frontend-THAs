@@ -1,41 +1,29 @@
 import React, { useState } from "react";
 
-const FoodItem = ({ food, foods, setFoods }) => {
+const FoodItem = ({ id, foods, setFoods }) => {
   const [open, setOpen] = useState(false);
 
-  const [curr, setCurr] = useState(food);
-  const [name, setName] = useState(curr.name);
-  const [amount, setAmount] = useState(curr.amount);
+  const [name, setName] = useState(foods[id].name);
+  const [amount, setAmount] = useState(foods[id].amount);
   const handleUpdate = () => {
-    setCurr({ ...curr, name, amount });
-    foods.map((elem) => {
-      console.log(foods.length);
-      if (elem.id === curr.id) {
-        elem = { ...curr };
-        console.log(elem.id);
-      }
-    });
-    // setFoods(
-    //   foods.map((elem) => {
-    //     if (elem.id === curr.id) {
-    //       elem = curr;
-    //     }
-    //   })
-    // );
+    let nFoods = [...foods];
+    nFoods[id].name = name;
+    nFoods[id].amount = amount;
+    setFoods(nFoods);
     setOpen(false);
   };
 
   const handleDelete = () => {
-    setFoods(foods.filter((elem) => elem.id !== curr.id));
+    setFoods(foods.filter((elem, idx) => idx !== id));
   };
 
   return (
     <div>
-      {open === false ? (
+      {!open ? (
         <>
-          <h3>{curr.name}</h3>
-          <p>You have consumed {curr.amount} calories</p>
-          <button onClick={setOpen(true)}>Edit</button>
+          <h3>{foods[id].name}</h3>
+          <p>You have consumed {foods[id].amount} calories</p>
+          <button onClick={() => setOpen(true)}>Edit</button>
         </>
       ) : (
         <>

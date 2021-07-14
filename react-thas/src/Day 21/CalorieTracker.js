@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AddFood from "./AddFood";
 import FoodItem from "./FoodItem";
 
@@ -8,8 +8,8 @@ const CalorieTracker = () => {
   return (
     <div>
       <AddFood foods={foods} setFoods={setFoods} />
-      {foods.map((elem) => (
-        <FoodItem food={elem} foods={foods} setFoods={setFoods} />
+      {foods.map((elem, index) => (
+        <FoodItem key={index} id={index} foods={foods} setFoods={setFoods} />
       ))}
     </div>
   );

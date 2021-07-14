@@ -5,7 +5,7 @@ const AddFood = ({ foods, setFoods }) => {
   const [amount, setAmount] = useState(0);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFoods([...foods, { id: foods.length, name, amount }]);
+    setFoods([...foods, { name, amount }]);
     setName("");
     setAmount(0);
   };
