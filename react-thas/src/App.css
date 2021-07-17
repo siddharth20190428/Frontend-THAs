@@ -7,7 +7,7 @@
 }
 
 .App {
-  height: 100vh;
+  height: fit-content;
   font-family: "Montserrat", serif;
   display: flex;
   flex-direction: column;
@@ -21,16 +21,6 @@
 .links > li > a {
   text-decoration: none;
   font-size: 20px;
-}
-
-.home-header {
-  position: absolute;
-  top: 0;
-  justify-self: flex-start;
-}
-
-.home-header > a {
-  text-decoration: none;
 }
 
 /* Chess Starts */

@@ -34,6 +34,8 @@ function showTodos(todo) {
   todoEl.appendChild(delEl);
   todoEl.appendChild(todoText);
   todosEl.appendChild(todoEl);
+
+  localStorage.setItem(JSON.stringify(todos));
 }
 
 todos.forEach((todo) => showTodos(todo));

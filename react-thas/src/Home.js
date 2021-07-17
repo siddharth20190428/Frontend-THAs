@@ -30,6 +30,9 @@ const Home = () => {
         <li>
           <Link to="/day21/">Day 21 (CalorieTracker)</Link>
         </li>
+        <li>
+          <Link to="/day22/">Day 22 (MemeGenerator)</Link>
+        </li>
       </ul>
     </div>
   );

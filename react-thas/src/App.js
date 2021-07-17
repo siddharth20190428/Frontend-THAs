@@ -9,6 +9,7 @@ import CalorieList1 from "./Day 18/CalorieList";
 import Box from "./Day 19/CountButtons";
 import CalorieList2 from "./Day 20/CalorieList";
 import CalorieTracker from "./Day 21/CalorieTracker";
+import MemeGenerator from "./Day 22/MemeGenerator";
 
 import foods from "./utils/FoodData";
 
@@ -16,9 +17,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <h3 className="home-header">
-          <Link to="/">Homepage</Link>
-        </h3>
         <Switch>
           <Route exact path="/day16/chess" component={Chess} />
           <Route exact path="/day16/meme-card" component={MemeCard} />
@@ -40,6 +38,7 @@ function App() {
             component={() => <CalorieList2 foods={foods} />}
           />
           <Route exact path="/day21/" component={CalorieTracker} />
+          <Route exact path="/day22/" component={MemeGenerator} />
           <Route exact path="/" component={Home} />
           <Home />
         </Switch>
