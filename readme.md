@@ -22,3 +22,5 @@ This repository contains the link to code of all my practise of Web Development
 | Day 18 | [Day 18](.react-thas/src/Day%2018) |
 | Day 19 | [Day 19](.react-thas/src/Day%2019) |
 | Day 20 | [Day 20](.react-thas/src/Day%2020) |
+| Day 21 | [Day 21](.react-thas/src/Day%2021) |
+| Day 22 | [Day 22](.react-thas/src/Day%2022) |
