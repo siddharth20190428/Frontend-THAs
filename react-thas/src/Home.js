@@ -33,6 +33,9 @@ const Home = () => {
         <li>
           <Link to="/day22/">Day 22 (MemeGenerator)</Link>
         </li>
+        <li>
+          <Link to="/day28/">Day 28 (Project with redux)</Link>
+        </li>
       </ul>
     </div>
   );

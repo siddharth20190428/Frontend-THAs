@@ -24,10 +24,6 @@ class CountButton extends React.Component {
 }
 
 class Box extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return React.createElement("div", {}, [
       React.createElement(
