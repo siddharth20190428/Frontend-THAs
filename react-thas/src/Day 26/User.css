@@ -1,0 +1,24 @@
+.user > form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+}
+
+.user > form input {
+  border: none;
+  border-bottom: 1px solid #555;
+  outline: none;
+  padding: 5px;
+}
+
+.user > form *,
+.output * {
+  margin: 10px;
+}
+
+.output {
+  margin-top: 20px;
+  text-align: center;
+  min-width: 250px;
+}

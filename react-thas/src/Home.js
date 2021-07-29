@@ -37,6 +37,19 @@ const Home = () => {
           <Link to="/day24/">Day 24 (Website)</Link>
         </li>
         <li>
+          <Link to="/day25/">Day 25 (Website using bootstrap)</Link>
+        </li>
+        <li>
+          <Link to="/day26/counter">
+            Day 26 (Counter State Change using Redux)
+          </Link>
+        </li>
+        <li>
+          <Link to="/day26/user-form">
+            Day 26 (User State Change using Redux)
+          </Link>
+        </li>
+        <li>
           <Link to="/day28/">Day 28 (Project with redux)</Link>
         </li>
       </ul>

@@ -11,9 +11,15 @@ import CalorieList2 from "./Day 20/CalorieList";
 import CalorieTracker from "./Day 21/CalorieTracker";
 import MemeGenerator from "./Day 22/MemeGenerator";
 import Website from "./Day 24/Website";
+import Website1 from "./Day 25/Website";
+import Counter from "./Day 26/Counter";
+import UserForm from "./Day 26/UserForm";
 import Weather from "./Day 28/Weather";
 
 import foods from "./utils/FoodData";
+import store from "./Day 26/store";
+
+import { Provider } from "react-redux";
 
 function App() {
   return (
@@ -42,6 +48,25 @@ function App() {
           <Route exact path="/day21/" component={CalorieTracker} />
           <Route exact path="/day22/" component={MemeGenerator} />
           <Route exact path="/day24/" component={Website} />
+          <Route exact path="/day25/" component={Website1} />
+          <Route
+            exact
+            path="/day26/counter"
+            component={() => (
+              <Provider store={store}>
+                <Counter />
+              </Provider>
+            )}
+          />
+          <Route
+            exact
+            path="/day26/user-form"
+            component={() => (
+              <Provider store={store}>
+                <UserForm />
+              </Provider>
+            )}
+          />
           <Route exact path="/day28/" component={Weather} />
           <Route exact path="/" component={Home} />
           <Home />
