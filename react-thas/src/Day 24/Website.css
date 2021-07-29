@@ -1,0 +1,33 @@
+.navbar {
+  margin: 2px;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  background: aliceblue;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 5px #aaa;
+}
+.navbar > li {
+  margin: 20px;
+}
+
+.navbar > li > a {
+  text-decoration: none;
+}
+
+.height-fit {
+  height: 80vh;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.green {
+  background: aquamarine;
+}
+.red {
+  background: lightcoral;
+}
