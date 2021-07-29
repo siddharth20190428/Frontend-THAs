@@ -15,8 +15,10 @@ const Chess = () => {
     return boxes;
   };
   return (
-    <div className="out">
-      <div className="board">{addBoxes()}</div>
+    <div className="center-page">
+      <div className="out">
+        <div className="board">{addBoxes()}</div>
+      </div>
     </div>
   );
 };

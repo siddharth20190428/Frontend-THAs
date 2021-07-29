@@ -10,6 +10,7 @@ import Box from "./Day 19/CountButtons";
 import CalorieList2 from "./Day 20/CalorieList";
 import CalorieTracker from "./Day 21/CalorieTracker";
 import MemeGenerator from "./Day 22/MemeGenerator";
+import Website from "./Day 24/Website";
 import Weather from "./Day 28/Weather";
 
 import foods from "./utils/FoodData";
@@ -40,6 +41,7 @@ function App() {
           />
           <Route exact path="/day21/" component={CalorieTracker} />
           <Route exact path="/day22/" component={MemeGenerator} />
+          <Route exact path="/day24/" component={Website} />
           <Route exact path="/day28/" component={Weather} />
           <Route exact path="/" component={Home} />
           <Home />

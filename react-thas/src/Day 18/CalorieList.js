@@ -17,7 +17,7 @@ const CalorieCard = ({ food, calory }) => {
 
 const CalorieList = ({ foods }) => {
   return (
-    <div>
+    <div className="center-page">
       <h2 className="head">Calorie Read Me</h2>
       <div className="container">
         {foods.map((elem) => (

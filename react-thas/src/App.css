@@ -7,8 +7,11 @@
 }
 
 .App {
-  height: fit-content;
   font-family: "Montserrat", serif;
+}
+
+.center-page {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +30,7 @@
 .out {
   background: #000;
   height: 202px;
+  width: fit-content;
   display: flex;
 }
 

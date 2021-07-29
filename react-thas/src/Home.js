@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="center-page">
       <h3>React THAs</h3>
       <ul className="links">
         <li>
@@ -32,6 +32,9 @@ const Home = () => {
         </li>
         <li>
           <Link to="/day22/">Day 22 (MemeGenerator)</Link>
+        </li>
+        <li>
+          <Link to="/day24/">Day 24 (Website)</Link>
         </li>
         <li>
           <Link to="/day28/">Day 28 (Project with redux)</Link>

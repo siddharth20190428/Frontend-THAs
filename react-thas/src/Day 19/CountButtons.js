@@ -25,7 +25,7 @@ class CountButton extends React.Component {
 
 class Box extends React.Component {
   render() {
-    return React.createElement("div", {}, [
+    return React.createElement("div", { className: "center-page" }, [
       React.createElement(
         "p",
         {},

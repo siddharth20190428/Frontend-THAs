@@ -19,16 +19,18 @@ const Chess = () => {
     );
   };
   return (
-    <div className="out">
-      <div className="board">
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
+    <div className="center-page">
+      <div className="out">
+        <div className="board">
+          <Row />
+          <Row />
+          <Row />
+          <Row />
+          <Row />
+          <Row />
+          <Row />
+          <Row />
+        </div>
       </div>
     </div>
   );

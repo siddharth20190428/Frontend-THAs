@@ -19,7 +19,7 @@ const CalorieCard = ({ card, cards, setCards }) => {
 const CalorieList = ({ foods }) => {
   const [cards, setCards] = useState(foods);
   return (
-    <div>
+    <div className="center-page">
       <h2 className="head">Calorie Read Me</h2>
       <div className="container">
         {cards.length === 0 ? (
