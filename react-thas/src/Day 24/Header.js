@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Login } from "./AuthContext";
-import "./Website.css";
 
 const Header = () => {
   const logs = useContext(Login);

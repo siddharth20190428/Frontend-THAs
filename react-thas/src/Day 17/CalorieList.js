@@ -13,7 +13,7 @@ const CalorieList = ({ foods }) => {
   return (
     <div className="center-page">
       <h2 className="head">Calorie Read Me</h2>
-      <div className="container">
+      <div className="cal-container">
         {foods.map((elem) => (
           <CalorieCard food={elem.name} calory={elem.calory} key={elem.id} />
         ))}

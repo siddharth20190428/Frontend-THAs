@@ -6,18 +6,21 @@ import Dashboard from "./Dashboard";
 import Header from "./Header";
 import Profile from "./Profile";
 import AuthContext from "./AuthContext";
+import "./Website.css";
 
 const Website = () => {
   return (
     <Router>
       <AuthContext>
-        <Header />
-        <Switch>
-          <Route path="/day24/about" component={About} />
-          <Route path="/day24/profile" component={Profile} />
-          <Route path="/day24/dashboard" component={Dashboard} />
-          <Route exact path="/day24" component={Home} />
-        </Switch>
+        <div className="normal">
+          <Header />
+          <Switch>
+            <Route path="/day24/about" component={About} />
+            <Route path="/day24/profile" component={Profile} />
+            <Route path="/day24/dashboard" component={Dashboard} />
+            <Route exact path="/day24" component={Home} />
+          </Switch>
+        </div>
       </AuthContext>
     </Router>
   );

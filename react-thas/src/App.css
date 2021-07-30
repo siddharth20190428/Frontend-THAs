@@ -42,16 +42,16 @@
   border: 1px solid white;
 }
 
-.row {
+.chess-row {
   display: flex;
 }
 
-.row:nth-child(odd) .box:nth-child(odd),
-.row:nth-child(even) .box:nth-child(even) {
+.chess-row:nth-child(odd) .box:nth-child(odd),
+.chess-row:nth-child(even) .box:nth-child(even) {
   background: #000;
 }
-.row:nth-child(odd) .box:nth-child(even),
-.row:nth-child(even) .box:nth-child(odd) {
+.chess-row:nth-child(odd) .box:nth-child(even),
+.chess-row:nth-child(even) .box:nth-child(odd) {
   background: #fff;
 }
 
@@ -63,7 +63,7 @@
 /* Chess Ends */
 
 /* Calorie List Starts*/
-.container {
+.cal-container {
   width: 500px;
   height: 400px;
   overflow-y: auto;

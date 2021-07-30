@@ -1,4 +1,4 @@
-.navbar {
+.normal .navbar {
   margin: 2px;
   display: flex;
   list-style: none;
@@ -7,27 +7,26 @@
   border: 1px solid #ddd;
   box-shadow: 0 1px 5px #aaa;
 }
-.navbar > li {
+.normal .navbar > li {
   margin: 20px;
 }
 
-.navbar > li > a {
+.normal .navbar > li > a {
   text-decoration: none;
 }
 
-.height-fit {
+.normal .height-fit {
   height: 80vh;
 }
-
-button {
+.normal .height-fit button {
   width: 60px;
   height: 30px;
   border: 1px solid #999;
   border-radius: 5px;
 }
-.green {
+.normal .green {
   background: aquamarine;
 }
-.red {
+.normal .red {
   background: lightcoral;
 }

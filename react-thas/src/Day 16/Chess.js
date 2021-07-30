@@ -6,7 +6,7 @@ const Chess = () => {
   };
   const Row = () => {
     return (
-      <div className="row">
+      <div className="chess-row">
         <Box />
         <Box />
         <Box />
