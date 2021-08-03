@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Chess from "./Day 16/Chess";
 import MemeCard from "./Day 16/MemeCard";
 import CalorieList from "./Day 17/CalorieList";
@@ -14,10 +14,12 @@ import Website from "./Day 24/Website";
 import Website1 from "./Day 25/Website";
 import Counter from "./Day 26/Counter";
 import UserForm from "./Day 26/UserForm";
+import ToDoThunk from "./Day 27/ToDoThunk";
 import Weather from "./Day 28/Weather";
 
 import foods from "./utils/FoodData";
 import store from "./Day 26/store";
+import todoStore from "./Day 27/todoStore";
 
 import { Provider } from "react-redux";
 
@@ -64,6 +66,15 @@ function App() {
             component={() => (
               <Provider store={store}>
                 <UserForm />
+              </Provider>
+            )}
+          />
+          <Route
+            exact
+            path="/day27/"
+            component={() => (
+              <Provider store={todoStore}>
+                <ToDoThunk />
               </Provider>
             )}
           />

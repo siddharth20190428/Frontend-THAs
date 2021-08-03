@@ -1,0 +1,18 @@
+.todo input {
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+.todo button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 20px;
+  border: 1px solid #555;
+  outline: none;
+}
+.todo .todo_item {
+  margin: 10px 0;
+}
