@@ -16,10 +16,12 @@ import Counter from "./Day 26/Counter";
 import UserForm from "./Day 26/UserForm";
 import ToDoThunk from "./Day 27/ToDoThunk";
 import Weather from "./Day 28/Weather";
+import Weather1 from "./Day 29/Weather";
 
 import foods from "./utils/FoodData";
 import store from "./Day 26/store";
 import todoStore from "./Day 27/todoStore";
+import weatherStore from "./Day 29/weatherStore";
 
 import { Provider } from "react-redux";
 
@@ -79,6 +81,15 @@ function App() {
             )}
           />
           <Route exact path="/day28/" component={Weather} />
+          <Route
+            exact
+            path="/day29/"
+            component={() => (
+              <Provider store={weatherStore}>
+                <Weather1 />
+              </Provider>
+            )}
+          />
           <Route exact path="/" component={Home} />
           <Home />
         </Switch>

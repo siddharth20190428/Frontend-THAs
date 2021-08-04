@@ -53,7 +53,10 @@ const Home = () => {
           <Link to="/day27/">Day 27 (To Do using React Thunk)</Link>
         </li>
         <li>
-          <Link to="/day28/">Day 28 (Project with redux)</Link>
+          <Link to="/day28/">Day 28 (Weather Project with state)</Link>
+        </li>
+        <li>
+          <Link to="/day29/">Day 29 (Weather Project with redux)</Link>
         </li>
       </ul>
     </div>
