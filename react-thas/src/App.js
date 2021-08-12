@@ -22,8 +22,10 @@ import foods from "./utils/FoodData";
 import store from "./Day 26/store";
 import todoStore from "./Day 27/todoStore";
 import weatherStore from "./Day 29/weatherStore";
+import countStore from "./Day 34/countStore";
 
 import { Provider } from "react-redux";
+import CounterInTSX from "./Day 34/CounterInTSX";
 
 function App() {
   return (
@@ -87,6 +89,15 @@ function App() {
             component={() => (
               <Provider store={weatherStore}>
                 <Weather1 />
+              </Provider>
+            )}
+          />
+          <Route
+            exact
+            path="/day34/"
+            component={() => (
+              <Provider store={countStore}>
+                <CounterInTSX />
               </Provider>
             )}
           />

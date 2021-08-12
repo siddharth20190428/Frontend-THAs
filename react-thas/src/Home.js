@@ -58,6 +58,9 @@ const Home = () => {
         <li>
           <Link to="/day29/">Day 29 (Weather Project with redux)</Link>
         </li>
+        <li>
+          <Link to="/day34/">Day 34 (Counter with redux in TS)</Link>
+        </li>
       </ul>
     </div>
   );
