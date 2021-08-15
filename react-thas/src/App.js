@@ -17,15 +17,18 @@ import UserForm from "./Day 26/UserForm";
 import ToDoThunk from "./Day 27/ToDoThunk";
 import Weather from "./Day 28/Weather";
 import Weather1 from "./Day 29/Weather";
+import TodoTSX from "./Day 33/App";
+import CounterInTSX from "./Day 34/CounterInTSX";
+import Instagram from "./Day 35/App";
 
 import foods from "./utils/FoodData";
 import store from "./Day 26/store";
 import todoStore from "./Day 27/todoStore";
 import weatherStore from "./Day 29/weatherStore";
 import countStore from "./Day 34/countStore";
+import instagramStore from "./Day 35/instagramStore";
 
 import { Provider } from "react-redux";
-import CounterInTSX from "./Day 34/CounterInTSX";
 
 function App() {
   return (
@@ -94,10 +97,29 @@ function App() {
           />
           <Route
             exact
+            path="/day33/"
+            component={() => (
+              // <Provider store={countStore}>
+              // <TodoTSX title="todo in TSX" description="hey how are you" />
+              <TodoTSX />
+              // </Provider>
+            )}
+          />
+          <Route
+            exact
             path="/day34/"
             component={() => (
               <Provider store={countStore}>
                 <CounterInTSX />
+              </Provider>
+            )}
+          />
+          <Route
+            exact
+            path="/day35/"
+            component={() => (
+              <Provider store={instagramStore}>
+                <Instagram />
               </Provider>
             )}
           />

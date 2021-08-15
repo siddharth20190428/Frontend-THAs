@@ -59,7 +59,13 @@ const Home = () => {
           <Link to="/day29/">Day 29 (Weather Project with redux)</Link>
         </li>
         <li>
+          <Link to="/day33/">Day 33 (Todo list and dark mode in TS)</Link>
+        </li>
+        <li>
           <Link to="/day34/">Day 34 (Counter with redux in TS)</Link>
+        </li>
+        <li>
+          <Link to="/day35/">Day 35 (Instagram with TS)</Link>
         </li>
       </ul>
     </div>
